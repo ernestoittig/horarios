@@ -108,6 +108,7 @@
   .container {
     display: grid;
     width: 100%;
+    height: 100vh;
     grid-auto-rows: 1fr;
   }
 
