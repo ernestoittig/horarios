@@ -1,0 +1,37 @@
+{
+  "name": "horarios",
+  "version": "1.0.0",
+  "description": "",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node dist/horarios.js",
+    "web:build": "rollup -c",
+    "web:dev": "rollup -c -w",
+    "web:start": "sirv web/public",
+    "make-png": "npm run test && npm run web:build && node make-png.js",
+    "prepare": "npm run make-png"
+  },
+  "author": "Ernesto Ittig <e.ittig@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "normalize.css": "^8.0.1",
+    "postcss": "^7.0.27",
+    "puppeteer": "^2.1.1",
+    "rollup": "^1.32.0",
+    "rollup-plugin-css-only": "^2.0.0",
+    "rollup-plugin-livereload": "^1.0.4",
+    "rollup-plugin-svelte": "^5.1.1",
+    "svelte": "^3.19.1",
+    "svelte-preprocess": "^3.4.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "sirv-cli": "^0.4.5"
+  }
+}
